@@ -1,6 +1,6 @@
 // ---- Settings: edit these ----
 const CONFIG = {
-  accessKey: "YOUR_WEB3FORMS_ACCESS_KEY", // free key from web3forms.com, sent to jhd7187@gmail.com
+  accessKey: "957db4be-d106-43c4-9e82-900db50f61a9", // free key from web3forms.com, sent to jhd7187@gmail.com
   confirmMinutes: 15                       // the "X minutes" in the confirmation message
 };
 const FEE = { mobile: 49, day: 35, night: 25, install: 30, disposal: 7, supplied: 40 };
