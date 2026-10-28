@@ -1,0 +1,42 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><title>Request a Technician | Rolling Tire Co.</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"></head><body><header class="site"><div class="wrap"><a class="brand" href="index.html"><img src="favicon.svg" alt="">Rolling Tire Co.</a><nav><a class="hide" href="index.html#services">Services</a><a class="hide" href="index.html#about">About</a><a class="hide" href="index.html#faq">FAQ</a><a class="navbtn" href="book.html">Book now</a></nav></div></header>
+<main id="main"><div class="formpage"><div class="wrap narrow">
+<div id="formwrap"><h1 style="font-size:clamp(34px,5vw,48px)">Request a technician</h1>
+<p class="lead" style="margin-bottom:56px">Answer a few questions and see your estimate before you send the request. Prefer to talk? Call <a href="tel:+14696424864">469-642-4864</a>.</p>
+<form id="f" novalidate>
+<input type="checkbox" name="botcheck" hidden>
+<fieldset><legend>What&rsquo;s wrong?</legend>
+<label for="issue">Problem</label>
+<select id="issue" name="Problem" required><option value="">Choose one</option>
+<option value="flat">Flat tire</option><option value="roadside">Stranded, need roadside help</option><option value="new">I need new tires</option><option value="supplied">Install tires I already bought</option><option value="air">Low pressure or tire inspection</option><option value="bead">Tire is leaking air at the rim</option><option value="tpms">TPMS warning light or sensor</option><option value="trailer">Trailer tire</option><option value="heavy">Heavy-duty truck or dually</option><option value="unsure">Not sure</option></select>
+<div id="qtyrow" hidden><label for="qty">How many tires?</label><select id="qty" name="Number of tires"><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
+<div class="lab" id="splabel">Do you have a spare?</div>
+<div class="choices" role="radiogroup" aria-labelledby="splabel"><label><input type="radio" name="Has spare" value="Yes" required>Yes</label><label><input type="radio" name="Has spare" value="No">No</label><label><input type="radio" name="Has spare" value="Unsure">Unsure</label></div></fieldset>
+
+<fieldset><legend>Your vehicle</legend>
+<div class="row"><div><label for="year" style="margin-top:14px">Year</label><select id="year" name="Year" required><option value="">Year</option></select></div>
+<div><label for="make" style="margin-top:14px">Make</label><input id="make" name="Make" list="makes" placeholder="Start typing" autocomplete="off" required></div>
+<div><label for="model" style="margin-top:14px">Model</label><input id="model" name="Model" list="models" placeholder="Start typing" autocomplete="off" required></div></div>
+<datalist id="makes"></datalist><datalist id="models"></datalist>
+<div id="vehmsg" class="msg" role="status">Pick a year, then search for your make and model. If yours is not listed, type it in.</div>
+<label for="size">Tire size <span class="hint">Optional. Printed on the tire sidewall, for example 225/65R17.</span></label>
+<input id="size" name="Tire size" placeholder="225/65R17">
+<label for="photo">Photo of the tire <span class="hint">Optional</span></label>
+<input id="photo" name="attachment" type="file" accept="image/*"></fieldset>
+
+<fieldset><legend>Where are you?</legend>
+<p class="msg" style="margin:0 0 16px">We use your location once, only to drop a pin so the technician can find you.</p>
+<button type="button" class="btn alt" id="loc">Use current location</button>
+<div id="locmsg" class="msg" role="status"></div><div id="map"></div>
+<label for="addr">Address or cross streets <span class="hint">Required if you do not share your location.</span></label>
+<input id="addr" name="Address" autocomplete="street-address"></fieldset>
+
+<fieldset><legend>How do we reach you?</legend>
+<label for="name">Your name</label><input id="name" name="Name" autocomplete="name" required>
+<label for="phone">Mobile number <span class="hint">We text you the ETA.</span></label><input id="phone" name="Phone" type="tel" autocomplete="tel" required></fieldset>
+
+<div class="est" id="est" hidden><div>Estimated total</div><div class="total" id="total"></div><details><summary>See what is included</summary><ul id="lines"></ul></details><p class="small" style="color:#b9c1c8;margin:16px 0 0" id="estnote"></p></div>
+<div id="err" class="msg err" role="alert"></div>
+<p style="margin-top:20px"><button class="btn" type="submit" id="go">Request technician</button></p>
+<p class="small">By sending this request you agree to our <a href="terms.html">Terms and Conditions</a> and <a href="privacy.html">Privacy Policy</a>.</p>
+</form></div></div></div></main><footer class="site"><div class="wrap"><div><strong>Rolling Tire Co.</strong><br>Mobile tire service, 7 AM to 7 PM<br>Plano, Allen, Frisco, Richardson, Murphy<br><br><a href="tel:+14696424864" style="margin:0">469-642-4864</a><br><a href="mailto:jhd7187@gmail.com" style="margin:0">jhd7187@gmail.com</a></div><div><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms and Conditions</a><p class="small" style="margin-top:20px">&copy; 2026 Rolling Tire Co. All rights reserved.</p></div></div></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script><script src="app.js"></script></body></html>
